@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello-rest-world-ingress
+  name: hello-rest-world
   annotations:
     spec.ingressClassName: traefik
     cert-manager.io/cluster-issuer: letsencrypt-prod
@@ -15,9 +15,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hello-rest-world-service
+                name: hello-rest-world
                 port:
-                  number: 5678
+                  number: 5679
   tls:
     - secretName: mortenkristensen-tls
       hosts:
