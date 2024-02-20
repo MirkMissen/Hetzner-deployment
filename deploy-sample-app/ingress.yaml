@@ -2,9 +2,13 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hello-rest-world-ingress
+  annotations:
+    spec.ingressClassName: traefik
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
 spec:
   rules:
-  - host: mortenkrsitensen.dk
+  - host: ${DOMAIN}
     http:
       paths:
       - path: /
@@ -14,3 +18,8 @@ spec:
             name: hello-rest-world-service
             port:
               name: web
+  tls:
+    - secretName: whoami-tls
+      hosts:
+        - ${DOMAIN}
+              
