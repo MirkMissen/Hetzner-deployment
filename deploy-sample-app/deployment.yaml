@@ -20,4 +20,4 @@ spec:
           image: thomaspoignant/hello-world-rest-json
           ports:
             - name: web
-              containerPort: 80
+              containerPort: 8080
