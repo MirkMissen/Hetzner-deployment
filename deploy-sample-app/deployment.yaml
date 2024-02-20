@@ -17,7 +17,6 @@ spec:
     spec:
       containers:
         - name: hello-rest-world
-          image: thomaspoignant/hello-world-rest-json
+          image: traefik/whoami:v1.9.0
           ports:
-            - name: web
-              containerPort: 8080
+            - containerPort: 80
