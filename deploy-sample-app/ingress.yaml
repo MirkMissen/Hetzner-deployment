@@ -4,7 +4,8 @@ metadata:
   name: hello-rest-world-ingress
 spec:
   rules:
-  - http:
+  - host: mortenkrsitensen.dk
+    http:
       paths:
       - path: /
         pathType: Prefix
