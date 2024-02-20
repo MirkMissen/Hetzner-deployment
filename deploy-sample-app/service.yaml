@@ -10,4 +10,4 @@ spec:
       targetPort: 80
 
   selector:
-    app: hello-rest-world
+    app: hello-rest-world-service
