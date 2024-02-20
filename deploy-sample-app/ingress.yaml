@@ -15,11 +15,11 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: whoami
+                name: hello-rest-world-service
                 port:
                   number: 5678
   tls:
-    - secretName: whoami-tls
+    - secretName: mortenkristensen-tls
       hosts:
         - mortenkristensen.dk
               
