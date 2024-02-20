@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: hello-rest-world
-          image: thomaspoignant/hello-world-rest-json
+          image: mirkmissen/test:latest
           ports:
             - containerPort: 8080
