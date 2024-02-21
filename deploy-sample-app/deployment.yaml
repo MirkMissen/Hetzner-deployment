@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: hello-rest-world
-          image: nginx
+          image: docker.io/mirkmissen/test:latest
           ports:
             - containerPort: 80
